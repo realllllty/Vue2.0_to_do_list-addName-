@@ -8,8 +8,9 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: '#app',//将当前vue组件生成的实例插入到页面的这个元素（id :app,这里使用了css当中的选择器）当中
   router,
   template: '<App/>',
+  //vue使用template来创建html
   components: { App }
 })

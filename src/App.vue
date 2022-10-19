@@ -2,6 +2,7 @@
   <div id="app">
     <!--<img src="./assets/logo.png">
     <router-view></router-view>-->
+<!--    向指定节点中渲染包含html结构的内容-->
     <h1 v-html="msg"></h1>
     <input  type="text" v-model="itemNew" v-on:keyup.enter="addNew"/>
     <ul>
@@ -18,7 +19,7 @@
 import Storage from './localstorage'
 //引入 Hello.vue 组件，命名为 Hello
 import Hello from './components/Hello'
-//ES6语法，相当于 
+//ES6语法，相当于
 //new Vue({})
 export default {
   name: 'app',//name属性作为组件名称，全局 ID 自动作为组件的 name
@@ -39,6 +40,7 @@ export default {
   		item.student = !item.student;
   	},
   	addNew:function () {
+      //javascript 对json数组进行操作，数组添加push操作
   		this.items.push({
   			name : this.itemNew,
   			student : false
