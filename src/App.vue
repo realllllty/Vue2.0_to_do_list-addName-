@@ -51,7 +51,7 @@ export default {
   },
   watch:{
   	items:{
-	  	 handler: function (items) {
+	  	 handler: function (items) {//handle watch当中具体需要执行的方法
 	      Storage.save(items);//监控li变化，将新增的值存入 sessionStorage 里
 	    },										//sessionStorage 里的数据将在页面关闭后删除
 	  	deep:true							//深度监视，只要 items 有一点改变就会触发回调函数handler

@@ -5,6 +5,6 @@ export default {
 		 || '[]')
 	},
 	save:function(items) {
-		window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(items))
+		window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(items))//将javascript对象转换为字符串
 	}
 }
